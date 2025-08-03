@@ -11,3 +11,9 @@ search_tool = Tool(
     
 )
 
+api_wrapper = WikipediaAPIWrapper(top_k_results=5, doc_content_chars_max=2000)
+wikipedia_tool = WikipediaQueryRun(
+    name="wikipedia",
+    api_wrapper=api_wrapper,
+    description="Use this tool to answer questions or find detials and information about a topic using Wikipedia.",
+)
